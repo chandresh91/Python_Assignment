@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'javac Pipeline.java' // Compile your Java file
+                sh 'javac PipeLine.java' // Compile your Java file
             }
         }
         stage('Run') {
             steps {
-                sh 'java Pipeline' // Run the compiled Java class
+                sh 'java PipeLine' // Run the compiled Java class
             }
         }
     }
