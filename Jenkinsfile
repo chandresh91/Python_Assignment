@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment
+    {    VERSION_NAME="1.0.0"
+    }
+    
     stages {
         stage('Build') {
             steps {
@@ -20,7 +24,7 @@ pipeline {
         }
         success
         {
-            echo "build successfully"
+            echo "${VERSION_NAME} build successfully"
         }
         failure
         {
